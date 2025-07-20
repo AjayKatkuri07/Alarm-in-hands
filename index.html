@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Alarm & Task Reminder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🔔 Smart Alarm + Reminder</h1>
+
+    <label for="alarmTime">Set Alarm Time (12hr):</label>
+    <input type="time" id="alarmTime" required />
+
+    <label for="alarmReason">Reason (e.g., Wake up):</label>
+    <input type="text" id="alarmReason" placeholder="Enter reason" required />
+
+    <label for="alarmSong">Choose Alarm Song:</label>
+    <input type="file" id="alarmSong" accept="audio/*" required />
+
+    <button onclick="setAlarm()">Set Alarm</button>
+    <p id="status">No alarm set yet.</p>
+
+    <audio id="audioPlayer" controls style="display:none;"></audio>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
